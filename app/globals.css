@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #fbfaf6;
+  color: #10221b;
+  --aivor-pine: #0a2f24;
+  --aivor-pine-dark: #071f17;
+  --aivor-surface: #fbfaf6;
+  --aivor-line: #dce5dc;
+  --aivor-muted: #516158;
+  --aivor-accent: #7aff78;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #fbfaf6;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+@keyframes aivor-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.aivor-marquee-track {
+  animation: aivor-marquee 26s linear infinite;
+  width: max-content;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .aivor-marquee-track { animation: none; }
+}
